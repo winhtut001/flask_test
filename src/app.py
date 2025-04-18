@@ -5,9 +5,9 @@ import os
 
 app = Flask(__name__)
 
-# Use environment variable for database path or fallback to local path
+# Use environment variable for database path
 if os.environ.get('RENDER'):
-    db_path = 'students.db'  # Use relative path on render.com
+    db_path = os.path.join(os.getcwd(), 'students.db')
 else:
     db_path = '/Users/hanwinhtut/Documents/testing/flask_test/students.db'
 
