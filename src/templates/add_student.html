@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add Student</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .form-group { margin-bottom: 15px; }
+        label { display: block; margin-bottom: 5px; }
+        input[type="text"] { width: 300px; padding: 8px; }
+        button { padding: 10px 15px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        .back-link { display: block; margin-top: 20px; }
+    </style>
+</head>
+<body>
+    <h1>Add New Student</h1>
+    
+    <form method="POST" action="/students/add">
+        <div class="form-group">
+            <label for="student_id">Student ID:</label>
+            <input type="text" id="student_id" name="student_id" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="nickname">Nickname:</label>
+            <input type="text" id="nickname" name="nickname" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="major">Major:</label>
+            <input type="text" id="major" name="major" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="faculty">Faculty:</label>
+            <input type="text" id="faculty" name="faculty" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="mat241_score">MAT241 Score:</label>
+            <input type="text" id="mat241_score" name="mat241_score" placeholder="N/A">
+        </div>
+        
+        <button type="submit">Add Student</button>
+    </form>
+    
+    <a href="/students" class="back-link">Back to Student List</a>
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student Management</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        tr:nth-child(even) { background-color: #f9f9f9; }
+        .add-btn { margin-bottom: 20px; padding: 10px; background-color: #4CAF50; 
+                  color: white; text-decoration: none; display: inline-block; border-radius: 4px; }
+    </style>
+</head>
+<body>
+    <h1>Student Management System</h1>
+    <a href="/students/add" class="add-btn">Add New Student</a>
+    
+    <table>
+        <tr>
+            <th>No</th>
+            <th>Student ID</th>
+            <th>Name</th>
+            <th>Nickname</th>
+            <th>Major</th>
+            <th>Faculty</th>
+            <th>MAT241 Score</th>
+        </tr>
+        {% for student in students %}
+        <tr>
+            <td>{{ student.no }}</td>
+            <td>{{ student.student_id }}</td>
+            <td>{{ student.name }}</td>
+            <td>{{ student.nickname }}</td>
+            <td>{{ student.major }}</td>
+            <td>{{ student.faculty }}</td>
+            <td>{{ student.mat241_score }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
